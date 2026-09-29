@@ -1,0 +1,177 @@
+% !TEX program = xelatex
+\documentclass{Laboratory-Report}
+
+% 荧光提示在下方正文中，填写报告时删除对应的内容即可。
+
+% 模板设置
+\TemplateSetup{
+  university={XIAMEN UNIVERSITY MALAYSIA},
+  logo-file={Resources/University-Logo.jpg}
+}
+
+% 微分符号
+\def\d{\dd}
+
+% 热物理 dbar符号
+\newcommand{\dbar}{\text{\dj}}
+
+% 显示样式求和与求积
+\newcommand{\dsum}{\mathop{\sum}\limits}
+\newcommand{\dprod}{\mathop{\prod}\limits}
+
+% 自然常数e与虚数单位i
+\newcommand{\e}{\mathrm{e}}
+\def\i{\mathrm{i}}
+
+
+%% ============================================
+%% 封面
+%% ============================================
+
+% ----Course Code----
+\CourseCode{PHY105}
+
+% ----Course Name{----
+\CourseName{Physics Lab I}
+
+% ----Lecturer----
+\Lecturer{Eu Shu Tian, Siti Khatijah Md Saad}
+
+% ----Academic Session----
+\AcademicSession{September 2026}
+
+% ----Assessment Title----
+\AssessmentTitle{}
+
+% ----Submission Due Date----
+\SubmissionDueDate{}
+
+% ----Prepared by----
+\ReportStudent{PHY2609001}{Student Name-1}
+\ReportStudent{PHY2609002}{Student Name-2}
+
+% ----Date Received----
+\DateReceived{}
+
+% ----Lecturer Feedback----
+\begin{LecturerFeedback}
+  % 在此填写Lecturer Feedback，支持空行分段。
+\end{LecturerFeedback}
+
+% ----Mark----
+\Mark{}
+
+
+
+%% ============================================
+%% 声明
+%% ============================================
+
+% ----Signature----
+\Signature{}
+
+% ----Declaration Date----
+\DeclarationDate{}
+
+
+
+%% ============================================
+%% 报告正文
+%% ============================================
+
+\begin{document}
+\MakeCover
+\MakeDeclarationPage
+
+% ----Title----
+\Title{}
+
+% ----Purpose of Experiment----
+\begin{PurposeofExperiment}
+  % 在此填写实验目的。
+\end{PurposeofExperiment}
+
+% ----Inferences----
+\begin{Inferences}
+  \item
+  \item
+  \item
+\end{Inferences}
+
+% ----Hypotheses----
+\begin{Hypotheses}
+  \item
+  \item
+  \item
+\end{Hypotheses}
+
+% ----Experimental Variables----
+\begin{ExperimentalVariables}
+  \VariableRow{1}{}{}{}
+  \VariableRow{2}{}{}{}
+  \VariableRow{3}{}{}{}
+\end{ExperimentalVariables}
+
+% ----Experimental Equipment, Setup, Methods----
+\ReportMethods
+
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(List equipment used, description of general setup (sketches/diagram optional), and methods of conducting the experiment. Explain the chosen methods of experiment.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写器材、实验装置和方法。
+
+% ----Hypothesis 1----
+\Hypothesis{1}
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Optional: List equipment setup and experimental methods specific to test hypothesis 1.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写假设 1 对应的方法。
+
+% ----Hypothesis 2----
+\Hypothesis{2}
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Optional: List equipment setup and experimental methods specific to test hypothesis 2.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写假设 2 对应的方法。
+
+% ----Results, Analysis and Discussion----
+\ReportResults
+
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Generate tables, charts and graphs using Microsoft Excel (or other software) and paste them here. For long tables, charts or graphs that require landscape format, you can attach them separately in the appendix. Results must be described, analysed and discussed in short paragraphs. Secondary data can then be analysed and derived from the graphed primary data.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写结果、分析和讨论。
+
+% ----Hypothesis 1----
+\Hypothesis{1}
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Optional: subsection your tables, charts and graphs with description, analysis and discussion for hypothesis 1.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写假设 1 对应的结果。
+
+% ----Hypothesis 2----
+\Hypothesis{2}
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Optional: subsection your tables, charts and graphs with description, analysis and discussion for hypothesis 2.)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写假设 2 对应的结果。
+
+
+% ----Conclusions and Recommendations----
+\ReportConclusions
+
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{(Conclude your experimental findings here. Recommend steps to improve the accuracy, precision or general validity of the experiment)}\par} % 荧光提示，请在填写实验报告内容时删除。
+% 在此直接填写结论和建议。
+
+
+
+
+
+
+
+% ----highlighted sentences should be deleted----
+\par\addvspace{\ReportModuleSpacing}
+{\fontsize{10}{13.2}\selectfont\itshape\RaggedRight
+\hl{*highlighted sentences should be deleted}\par} % 荧光提示，请在填写实验报告内容时删除。
+
+
+%% ============================================
+%% 评分规则
+%% ============================================
+\MakeMarkingRubric
+\end{document}
