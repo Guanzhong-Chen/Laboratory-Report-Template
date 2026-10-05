@@ -4,7 +4,7 @@
   \noindent\textbf{Title:}\enspace#1\report@modulebreak}
 \NewDocumentEnvironment{PurposeofExperiment}{}{%
   \report@modulebreak\Needspace{3\baselineskip}
-  \noindent\textbf{Purpose of Experiment:}\par\nobreak
+  \noindent\textbf{Purpose of Experiment:}\par\nobreak\vspace{17pt}
   \ignorespaces
 }{\report@modulebreak\ignorespacesafterend}
 \NewDocumentEnvironment{Inferences}{}{%
