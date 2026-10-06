@@ -35,7 +35,9 @@
 \RequirePackage{graphicx}
 \RequirePackage{booktabs}
 \RequirePackage{tabularray}
-\UseTblrLibrary{booktabs,siunitx}
+\UseTblrLibrary{booktabs,siunitx,varwidth}
+% Enable paragraph/list measurement only for tables that request it.
+\SetTblrInner{measure=hbox}
 \RequirePackage{float}
 \RequirePackage{subcaption}
 \RequirePackage{tikz}

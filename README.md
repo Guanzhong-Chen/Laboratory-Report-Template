@@ -21,7 +21,7 @@ latexmk -xelatex main.tex
 | 物理公式、向量与微分 | physics | `\dd`、`\dv{x}{t}`、`\pdv{U}{x}`、`\vb{F}`、`\abs{x}`、`\quantity(...)` |
 | 其他导数与微分写法 | derivative | `\odv{x}{t}`、`\odif{t}`；`\pdv` 使用 physics 的定义 |
 | 数值、SI 单位与不确定度 | siunitx | `\num{...}`、`\qty{...}{...}`、`\unit{...}`、按小数点对齐的 S 列 |
-| 数据表格 | tabularray、booktabs | tblr、三线表；已启用 tabularray 的 booktabs 和 siunitx 支持 |
+| 数据表格 | tabularray、booktabs | tblr、三线表；已启用 tabularray 的 booktabs、siunitx 和 varwidth 支持；变量表可包含列表 |
 | 图片、示意图与实验曲线 | graphicx、tikz、pgfplots | 插图、坐标图、数据曲线、误差线；TikZ 已启用 arrows.meta、calc、positioning |
 | 浮动图表与子图 | float、subcaption | `[H]` 定位、并排子图及子标题 |
 | 颜色与原稿标记 | xcolor、soul | 表格颜色、`\hl{...}` 黄色标记 |
@@ -219,7 +219,10 @@ siunitx 已设置为用 `\pm` 分开展示不确定度，因此 `9.81(3)` 表示
 \end{Hypotheses}
 
 \begin{ExperimentalVariables}
-  \VariableRow{1}{Length $L$}{Period $T$}{Mass, release angle}
+  \VariableRow{1}{Length $L$}{Period $T$}{
+    \item Mass
+    \item Release angle
+  }
   \VariableRow{2}{}{}{}
   \VariableRow{3}{}{}{}
 \end{ExperimentalVariables}
@@ -255,7 +258,7 @@ Summarise findings and improvements.
 | `PurposeofExperiment` 环境 | 实验目的，正文从标题下一行开始；支持空行分段 |
 | Inferences、Hypotheses | 推论、假设列表；每条用 \item |
 | `ExperimentalVariables` | 自动生成表头的实验变量表，使用 `\begin{ExperimentalVariables}` 和 `\end{ExperimentalVariables}` |
-| \VariableRow{编号}{自变量}{因变量}{控制变量} | 一行变量；单元格自动换行并居中 |
+| \VariableRow{编号}{自变量}{因变量}{控制变量} | 一行变量；内容列左对齐、顶部对齐，支持 `\item` 圆点列表；表头和编号居中 |
 | `\ReportMethods` | 无参数，只生成器材、实验装置和方法标题；正文直接写在后面 |
 | `\Hypothesis{编号}` | 只接收假设编号，生成 Hypothesis 编号标题；方法、结果部分共用，正文直接写在后面 |
 | `\ReportConclusions` | 无参数，只生成结论和建议标题；正文直接写在后面 |
@@ -265,6 +268,25 @@ Summarise findings and improvements.
 `PurposeofExperiment` 使用 `\begin{PurposeofExperiment}` 和 `\end{PurposeofExperiment}` 包围内容。`\ReportMethods`、`\ReportResults`、`\ReportConclusions` 后不加 `{}`；`\Hypothesis` 后只保留一组 `{}` 填写编号，方法或结果正文写在下一行。
 
 正文可使用多段文字、公式、普通表格和 \includegraphics；空行或 \par 均可分段。假设专用小节可按需要增删，列表项和变量行也可增删。空白示例保留原稿的正文结构；填写较长内容后允许自然增加页数。
+
+## 实验变量表中的列表
+
+变量内容列（自变量、因变量、控制变量）左对齐，首行靠单元格顶部；表头和假设编号保持居中。文字自动换行，行高随内容增加。
+
+`\VariableRow` 的后三个参数既可以填写普通文字，也可以直接以 `\item` 开头写圆点列表，无需额外套 `itemize` 环境：
+
+~~~latex
+\begin{ExperimentalVariables}
+  \VariableRow{1}{Length $L$}{Period $T$}{
+    \item Mass of the pendulum bob
+    \item Release angle
+    \item Gravitational acceleration
+  }
+  \VariableRow{2}{Mass $m$}{Period $T$}{Length and release angle}
+\end{ExperimentalVariables}
+~~~
+
+每个 `\item` 在当前单元格中添加一个圆点条目，续行与条目文字对齐；新增表格行仍使用 `\VariableRow`。自变量和因变量单元格也支持同样的列表写法。普通文字不自动加圆点，空参数 `{}` 留空。
 
 ## 模块目录
 
