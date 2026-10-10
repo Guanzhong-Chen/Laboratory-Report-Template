@@ -1,6 +1,4 @@
-\ProvidesFile{Report-Conclusions.cls}[2026/09/28 Conclusions and recommendations]
+\ProvidesFile{Report-Conclusions.cls}[2026/10/10 Conclusions with Word paragraph spacing]
 \newcommand{\ReportConclusions}{%
-  \report@modulebreak\Needspace{3\baselineskip}
-  \noindent\textbf{Conclusions and Recommendations}\par\nobreak\vspace{9pt}
-  \ignorespaces}
+  \report@bodyheading{\textbf{Conclusions and Recommendations}}}
 \endinput

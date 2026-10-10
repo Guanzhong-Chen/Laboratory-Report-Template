@@ -1,10 +1,6 @@
-\ProvidesFile{Report-Methods.cls}[2026/09/28 Equipment, setup and methods]
+\ProvidesFile{Report-Methods.cls}[2026/10/10 Equipment and methods with Word paragraph spacing]
 \newcommand{\ReportMethods}{%
-  \report@modulebreak\Needspace{3\baselineskip}
-  \noindent\textbf{Experimental Equipment, Setup, Methods}\par\nobreak\vspace{10pt}
-  \ignorespaces}
+  \report@bodyheading{\textbf{Experimental Equipment, Setup, Methods}}}
 \newcommand{\Hypothesis}[1]{%
-  \report@modulebreak\Needspace{3\baselineskip}
-  \noindent Hypothesis #1\par\nobreak\vspace{10pt}
-  \ignorespaces}
+  \report@bodyheading{Hypothesis #1}}
 \endinput

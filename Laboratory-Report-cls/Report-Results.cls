@@ -1,6 +1,4 @@
-\ProvidesFile{Report-Results.cls}[2026/09/28 Results, analysis and discussion]
+\ProvidesFile{Report-Results.cls}[2026/10/10 Results with Word paragraph spacing]
 \newcommand{\ReportResults}{%
-  \report@modulebreak\Needspace{3\baselineskip}
-  \noindent\textbf{Results, Analysis and Discussion}\par\nobreak\vspace{7pt}
-  \ignorespaces}
+  \report@bodyheading{\textbf{Results, Analysis and Discussion}}}
 \endinput

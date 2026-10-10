@@ -192,6 +192,16 @@ siunitx 已设置为用 `\pm` 分开展示不确定度，因此 `9.81(3)` 表示
 
 `\ReportResults` 生成 Results, Analysis and Discussion 标题，不强制换页。结果部分按页面剩余空间自然排版；空间不足时自动换页，标题会尽量与后续内容一起保留。封面、声明页和评分表各自的分页由对应模块负责。
 
+从 `\ReportMethods`（Experimental Equipment, Setup, Methods）开始，方法、结果、结论及 Hypothesis 小节的标题和正文采用 Word 原稿的 **10 磅段后间距**。普通正文用空行或 `\par` 分段即可；`\\` 仅换行，不会产生新的段落间距。
+
+该间距独立于上面的 17 pt 模块间距，标题后的空白只计算一次。对应设置也在主类中：
+
+~~~latex
+\setlength{\ReportParagraphSpacing}{10bp}
+~~~
+
+`bp` 对应 Word 使用的磅（1/72 英寸）。这项设置从方法部分开始启用；评分表使用自己的段落布局。
+
 ## 正文命令
 
 ~~~latex

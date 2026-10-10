@@ -2,6 +2,7 @@
 \newcommand{\MakeMarkingRubric}{%
   \clearpage
   \begingroup
+  \setlength{\parskip}{0pt}% Body paragraph spacing does not apply to the rubric.
   \noindent\hfill\textbf{APPENDIX 1}\par\vspace{5pt}
   {\centering\bfseries MARKING RUBRICS\par}\vspace{16pt}
   \fontsize{10}{11.5}\selectfont\bfseries

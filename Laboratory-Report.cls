@@ -22,6 +22,21 @@
 \setlength{\ReportModuleSpacing}{17pt}
 \newcommand{\report@modulebreak}{\par\addvspace{\ReportModuleSpacing}}
 
+% Word's Normal style has 200 twips (10 typographic points) after a paragraph.
+% Activate this spacing only in the methods/results/conclusions body.
+\newlength{\ReportParagraphSpacing}
+\setlength{\ReportParagraphSpacing}{10bp}
+\newcommand{\report@bodyheading}[1]{%
+  \par\setlength{\parskip}{\ReportParagraphSpacing}%
+  \report@modulebreak\Needspace{3\baselineskip}%
+  \begingroup
+    % The preceding module gap is already present; suppress another parskip.
+    \setlength{\parskip}{0pt}%
+    \noindent#1\par\nobreak
+  \endgroup
+  % The following paragraph supplies the Word paragraph gap exactly once.
+  \ignorespaces}
+
 % These .cls files are input modules, not independent document classes.
 \input{Laboratory-Report-cls/Metadata.cls}
 \input{Laboratory-Report-cls/Cover.cls}
